@@ -1,0 +1,21 @@
+{
+    "name": "heorhiev/php-light-http",
+    "authors": [
+        {
+            "name": "Ruslan",
+            "email": ""
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.3"
+    },
+    "require-dev": {
+        "ext-sqlite3": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\http\\": "src"
+        }
+    }
+}
