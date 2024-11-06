@@ -5,5 +5,5 @@ namespace app\http\interfaces;
 
 interface ControllerInterface
 {
-    public function main();
+    public function main(): void;
 }
