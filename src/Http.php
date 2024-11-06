@@ -4,19 +4,22 @@ namespace app\http;
 
 use app\http\interfaces\ControllerInterface;
 use app\http\components\exceptions\NotFoundException;
-use app\http\services\RequestService;
 
 
-class HTTP
+class Http
 {
+    private function __construct()
+    {
+
+    }
+
+
     /**
      * @throws NotFoundException
      */
-    public function start(): void
+    public static function run(string $action): void
     {
         try {
-            $action = RequestService::get('action');
-
             $controllerClassName = Router::get($action);
 
             $controller = new $controllerClassName();
