@@ -2,7 +2,6 @@
 
 namespace light\http;
 
-use light\http\interfaces\ControllerInterface;
 use light\http\components\exceptions\NotFoundException;
 
 
