@@ -1,6 +1,6 @@
 <?php
 
-namespace app\http;
+namespace light\http;
 
 
 class Router

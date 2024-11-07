@@ -1,6 +1,6 @@
 <?php
 
-namespace app\http\interfaces;
+namespace light\http\interfaces;
 
 
 interface ControllerInterface

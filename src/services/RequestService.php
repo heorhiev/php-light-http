@@ -1,6 +1,6 @@
 <?php
 
-namespace app\http\services;
+namespace light\http\services;
 
 
 class RequestService

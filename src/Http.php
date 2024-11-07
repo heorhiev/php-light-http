@@ -1,9 +1,9 @@
 <?php
 
-namespace app\http;
+namespace light\http;
 
-use app\http\interfaces\ControllerInterface;
-use app\http\components\exceptions\NotFoundException;
+use light\http\interfaces\ControllerInterface;
+use light\http\components\exceptions\NotFoundException;
 
 
 class Http

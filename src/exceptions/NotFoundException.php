@@ -1,6 +1,6 @@
 <?php
 
-namespace app\http\components\exceptions;
+namespace light\http\components\exceptions;
 
 
 class NotFoundException extends \Exception

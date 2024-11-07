@@ -1,6 +1,6 @@
 <?php
 
-namespace app\http\services\http;
+namespace light\http\services\http;
 
 
 class ResponseService
