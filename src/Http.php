@@ -8,19 +8,17 @@ use light\http\components\exceptions\NotFoundException;
 
 class Http
 {
-    private function __construct()
-    {
 
-    }
+    private static $_routes = [];
 
 
     /**
      * @throws NotFoundException
      */
-    public static function run(string $action): void
+    public function run(string $action): void
     {
         try {
-            $controllerClassName = Router::get($action);
+            $controllerClassName = self::getRoute($action);
 
             $controller = new $controllerClassName();
 
@@ -33,5 +31,17 @@ class Http
         }
 
         throw new NotFoundException();
+    }
+
+
+    public static function addRoute(string $action, string $controllerClass): void
+    {
+        self::$_routes[$action] = $controllerClass;
+    }
+
+
+    public static function getRoute(string $action): ?string
+    {
+        return self::$_routes[$action] ?? '';
     }
 }
