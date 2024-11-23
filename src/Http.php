@@ -16,20 +16,17 @@ class Http
      */
     public function run(string $action): void
     {
-        try {
-            $controllerClassName = self::getRoute($action);
+        $controllerClassName = self::getRoute($action);
 
-            $controller = new $controllerClassName();
-
-            if ($controller instanceof ControllerInterface) {
-                $controller->main();
-                return;
-            }
-        } catch (\Throwable $e) {
-            var_dump($e);
+        if (!$controllerClassName) {
+            throw new NotFoundException();
         }
 
-        throw new NotFoundException();
+        $controller = new $controllerClassName();
+
+        if ($controller instanceof ControllerInterface) {
+            $controller->main();
+        }
     }
 
 
